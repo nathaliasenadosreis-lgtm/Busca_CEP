@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuscaCEP | Consulta de Endereços</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header>
+            <div class="icone">⌖</div>
+            <h1>BuscaCEP</h1>
+            <p>Encontre um endereço de forma rápida e fácil.</p>
+        </header>
+
+        <form id="formulario">
+            <label for="cep">Digite o CEP desejado</label>
+
+            <div class="campo-busca">
+                <input
+                    type="text"
+                    id="cep"
+                    placeholder="Ex.: 01001-000"
+                    maxlength="9"
+                    autocomplete="postal-code"
+                    required
+                >
+                <button type="submit" id="botaoBuscar">Buscar</button>
+            </div>
+            <p class="dica">Digite os 8 números do CEP.</p>
+        </form>
+
+        <p id="mensagem" role="status" aria-live="polite"></p>
+
+        <section id="resultado" hidden>
+            <h2>Endereço encontrado</h2>
+
+            <div class="campo">
+                <span>Rua</span>
+                <p id="rua">-</p>
+            </div>
+
+            <div class="campo">
+                <span>Bairro</span>
+                <p id="bairro">-</p>
+            </div>
+
+            <div class="campo">
+                <span>Cidade</span>
+                <p id="cidade">-</p>
+            </div>
+
+            <div class="campo">
+                <span>Estado</span>
+                <p id="estado">-</p>
+            </div>
+
+            <div class="campo">
+                <span>CEP</span>
+                <p id="cepEncontrado">-</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Consulta realizada pela API pública ViaCEP.</p>
+            <p>Projeto escolar de Desenvolvimento de Websites</p>
+        </footer>
+    </main>
+</body>
+</html>
